@@ -1,0 +1,43 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: interview_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: interview
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql
+
+  backend:
+    build: ./backend
+    container_name: interview_backend
+    restart: always
+    environment:
+      - database.default.hostname=db
+      - database.default.database=interview
+      - database.default.username=root
+      - database.default.password=root
+    volumes:
+      - ./backend:/var/www/html
+    # Not exposing 8080 to host, Nginx will handle it
+
+  frontend:
+    build: ./frontend
+    container_name: interview_frontend
+    restart: always
+    # Not exposing 80 to host, Nginx will handle it
+
+  gateway:
+    image: nginx:stable-alpine
+    container_name: interview_gateway
+    restart: always
+    ports:
+      - "8888:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend
+      - backend

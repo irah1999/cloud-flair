@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary benefit of using TypeScript over JavaScript?",
+    "options": ["Faster execution", "Static typing for error detection", "Less code to write", "No need for a browser"],
+    "answer": "Static typing for error detection"
+  },
+  {
+    "id": 2,
+    "question": "In React, what hook is used to perform side effects?",
+    "options": ["useState", "useContext", "useEffect", "useMemo"],
+    "answer": "useEffect"
+  },
+  {
+    "id": 3,
+    "question": "What does the 'utility-first' approach in Tailwind CSS mean?",
+    "options": ["Writing raw CSS in files", "Using predefined classes for styling", "Using only JS for styles", "Avoiding CSS entirely"],
+    "answer": "Using predefined classes for styling"
+  },
+  {
+    "id": 4,
+    "question": "Which protocol is primarily used by WebRTC for real-time media transport?",
+    "options": ["HTTP", "FTP", "UDP/RTP", "SMTP"],
+    "answer": "UDP/RTP"
+  },
+  {
+    "id": 5,
+    "question": "In CodeIgniter 4, where are the routes defined?",
+    "options": ["app/Config/Routes.php", "app/Controllers/Routes.php", "index.php", "public/routes.js"],
+    "answer": "app/Config/Routes.php"
+  },
+  {
+    "id": 6,
+    "question": "What is the HTTP status code for 'Unauthorized'?",
+    "options": ["200", "404", "401", "500"],
+    "answer": "401"
+  },
+  {
+    "id": 7,
+    "question": "Which MySQL join returns records when there is a match in one of the tables?",
+    "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "OUTER JOIN"],
+    "answer": "INNER JOIN"
+  },
+  {
+    "id": 8,
+    "question": "What is the purpose of a 'key' prop in React lists?",
+    "options": ["To style elements", "To uniquely identify elements for reconciliation", "To store data", "To handle clicks"],
+    "answer": "To uniquely identify elements for reconciliation"
+  },
+  {
+    "id": 9,
+    "question": "Which Git command is used to combine two branches?",
+    "options": ["git pull", "git merge", "git commit", "git push"],
+    "answer": "git merge"
+  },
+  {
+    "id": 10,
+    "question": "How do you define an optional property in a TypeScript interface?",
+    "options": ["propertyName!", "propertyName?", "optional propertyName", "propertyName*"],
+    "answer": "propertyName?"
+  }
+]
